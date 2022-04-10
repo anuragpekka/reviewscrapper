@@ -7,9 +7,9 @@ from urllib.request import urlopen as uReq
 app = Flask(__name__)
 
 @app.route('/',methods=['GET'])  # route to display the home page
-@cross_origin()
+@cross_origin() #used when app is hosted in cloud
 def homePage():
-    return render_template("index.html")
+    return render_template("index.html") #inside templates folder
 
 @app.route('/review',methods=['POST','GET']) # route to show the review comments in a web UI
 @cross_origin()
